@@ -11,7 +11,7 @@ import (
 
 func main() {
 	apiKey := "sk_95d61733e9554e2d434d8b65da70495fc4b03265" 
-	htmlFilePath := "/home/chandra/Downloads/resume/golang.html"
+	htmlFilePath := "/home/chandra/Music/resume-pdf-converter/DevOpsResume.html"
 	outputPDFPath := "resume_cv_single_page54.pdf"
 
 	htmlContent, err := os.ReadFile(htmlFilePath)
@@ -25,7 +25,7 @@ func main() {
 		"format":    "A5",       
 		"landscape": false,
 		"use_print": true,
-		"zoom":      0.6,      
+		"zoom":      0.589,      
 		"margin": map[string]string{
 			"top":    "0in",
 			"bottom": "0in",
