@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Green Resume Template</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .resume-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 297mm;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+        }
+        
+        .left-column {
+            padding: 40px 30px;
+            background: linear-gradient(180deg, #2d5a27 0%, #4a7c59 100%);
+            color: white;
+        }
+        
+        .right-column {
+            padding: 40px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .name {
+            font-size: 26px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 14px;
+            color: #a8d8a8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .contact-info {
+            font-size: 11px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+        }
+        
+        .contact-info a {
+            color: #a8d8a8;
+            text-decoration: none;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 25px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #4a7c59;
+            padding-bottom: 8px;
+        }
+        
+        .left-column .section-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.4);
+        }
+        
+        .right-column .section-title {
+            color: #2d5a27;
+            border-bottom-color: #4a7c59;
+        }
+        
+        .summary {
+            font-size: 12px;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 25px;
+            color: #444;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .job-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #2d5a27;
+            margin-bottom: 5px;
+        }
+        
+        .company-info {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        
+        .job-description {
+            font-size: 11px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .education {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #2d5a27;
+            margin-bottom: 3px;
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 25px;
+        }
+        
+        .skill-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 10px;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .achievement-item {
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid rgba(255,255,255,0.5);
+        }
+        
+        .achievement-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 6px;
+        }
+        
+        .achievement-desc {
+            font-size: 10px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.5;
+        }
+        
+        .project-item {
+            margin-bottom: 20px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #4a7c59;
+        }
+        
+        .project-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2d5a27;
+            margin-bottom: 4px;
+        }
+        
+        .project-date {
+            font-size: 10px;
+            color: #6c757d;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .project-desc {
+            font-size: 11px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .certification-item {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        
+        .cert-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 3px;
+        }
+        
+        .cert-desc {
+            font-size: 10px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        @media print {
+            body { 
+                background: white; 
+                padding: 0;
+            }
+            .resume-container { 
+                box-shadow: none; 
+                border-radius: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="left-column">
+            <div class="header">
+                <div class="name">HARSHITHA POLADI</div>
+                <div class="title">Senior Associate DevOps</div>
+                <div class="contact-info">
+                    9346565825<br>
+                    harshithapoladi236@gmail.com<br>
+                    <a href="https://www.linkedin.com/in/harshitha-poladi-a16029226">linkedin.com/in/harshitha-poladi</a><br>
+                    Hyderabad, India
+                </div>
+            </div>
+            
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">GCP</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Helm</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">Ansible</span>
+                <span class="skill-tag">Jenkins</span>
+                <span class="skill-tag">GitLab CI</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Golang</span>
+                <span class="skill-tag">Bash</span>
+                <span class="skill-tag">Kafka</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">Prometheus</span>
+                <span class="skill-tag">Grafana</span>
+                <span class="skill-tag">Git</span>
+            </div>
+            
+            <div class="section-title">Certifications</div>
+            <div class="certification-item">
+                <div class="cert-name">CKAD</div>
+                <div class="cert-desc">Certified Kubernetes Application Developer<br>Score: 70%</div>
+            </div>
+            
+            <div class="section-title">Awards & Recognition</div>
+            <div class="achievement-item">
+                <div class="achievement-title">ACE - Best Employee Award</div>
+                <div class="achievement-desc">
+                    Recognized for two consecutive quarters for exceptional performance in infrastructure automation and DevOps implementation
+                </div>
+            </div>
+            
+            <div class="achievement-item">
+                <div class="achievement-title">System Reliability Excellence</div>
+                <div class="achievement-desc">
+                    Achieved 99.95% uptime for production systems through automated monitoring and incident response
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-column">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                DevOps and Infrastructure Engineer with 3 years of experience specializing in building robust, scalable cloud infrastructure and automation solutions. Proficient in designing high-performance, containerized architectures, implementing CI/CD pipelines, and managing production systems with 99.95% uptime. Strong focus on Infrastructure as Code, automation, monitoring, and collaborative DevOps practices. Experienced in Kubernetes orchestration, cloud infrastructure management, and incident response with a proven track record of improving developer productivity and system reliability.
+            </div>
+            
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="experience-item">
+                <div class="job-title">Senior Associate DevOps Engineer</div>
+                <div class="company-info">NPCI | July 2023 - Present | Hyderabad, India</div>
+                <div class="job-description">
+                    • Architected and maintained cloud infrastructure using Kubernetes, Docker, and Helm for high-performance payment systems<br>
+                    • Developed Infrastructure as Code solutions using advanced automation patterns, ensuring high availability and fault tolerance<br>
+                    • Built and managed CI/CD pipelines integrating containerized services for scalable deployment processes<br>
+                    • Reduced deployment time by 50% through automated pipeline orchestration and parallelized infrastructure provisioning<br>
+                    • Implemented monitoring and alerting solutions to maintain system observability and performance optimization<br>
+                    • Collaborated with development teams to establish DevOps best practices and improve developer productivity<br>
+                    • Achieved real-time infrastructure monitoring with automated scaling, maintaining sub-300ms response times
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-title">Associate DevOps Engineer</div>
+                <div class="company-info">NPCI | December 2022 - July 2023 | Hyderabad, India</div>
+                <div class="job-description">
+                    • Designed and implemented automated deployment processes for core business applications<br>
+                    • Built secure and scalable infrastructure solutions, optimizing resource utilization and cost efficiency<br>
+                    • Automated internal DevOps tooling and infrastructure provisioning workflows<br>
+                    • Ensured system reliability through comprehensive monitoring, logging, and alerting implementations<br>
+                    • Enhanced system performance by 3x using containerization and orchestration best practices
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-title">Graduate Engineer Trainee</div>
+                <div class="company-info">NPCI | July 2022 - December 2022 | Hyderabad, India</div>
+                <div class="job-description">
+                    • Developed automated deployment pipelines and infrastructure provisioning scripts<br>
+                    • Improved infrastructure deployment processes, reducing provisioning time by 30%<br>
+                    • Demonstrated hands-on skills in containerization and infrastructure automation<br>
+                    • Participated in code reviews and infrastructure design using Git version control<br>
+                    • Contributed to designing containerized microservices architecture and deployment strategies
+                </div>
+            </div>
+            
+            <div class="section-title">Education</div>
+            <div class="education">
+                <div class="degree">Bachelor of Technology - Electronics & Communication Engineering</div>
+                <div>Jyothishmathi Institute of Technology and Sciences | June 2018 - June 2022</div>
+                <div style="color: #4a7c59; font-weight: 600;">CGPA: 9.3/10</div>
+            </div>
+            
+            <div class="section-title">Key Projects</div>
+            
+            <div class="project-item">
+                <div class="project-title">High-Performance Infrastructure Platform</div>
+                <div class="project-date">December 2023 | Hyderabad, India</div>
+                <div class="project-desc">
+                    Built a scalable, automated infrastructure platform supporting high-throughput transaction processing for financial systems used by major banks. Implemented Infrastructure as Code, automated deployment pipelines, and comprehensive monitoring solutions.
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">DevOps Automation Suite</div>
+                <div class="project-date">Ongoing Project</div>
+                <div class="project-desc">
+                    Created comprehensive DevOps automation tools using Python and infrastructure scripting. Implemented CI/CD pipelines with containerization strategies and automated testing frameworks. Reduced operational costs by 25% through infrastructure optimization.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
