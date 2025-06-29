@@ -25,7 +25,7 @@ func main() {
 		"format":    "A5",       
 		"landscape": false,
 		"use_print": true,
-		"zoom":      0.589,      
+		"zoom":      0.58,      
 		"margin": map[string]string{
 			"top":    "0in",
 			"bottom": "0in",
